@@ -2,7 +2,7 @@
 
 تطبيق ويب (PWA) لتسجيل نواقص المحل. بيتنزل على الشاشة الرئيسية للآيفون، ويشتغل من غير نت، وكل الموبايلات بتشوف نفس القائمة لحظيًا.
 
-التقنيات: React + Vite + TypeScript + Tailwind + Supabase + vite-plugin-pwa.
+التقنيات: React + Vite + TypeScript + Tailwind + Supabase + vite-plugin-pwa، والاستضافة على GitHub Pages.
 
 ---
 
@@ -64,29 +64,25 @@ npm run preview
 
 ---
 
-## 3. النشر على Vercel
+## 3. النشر على GitHub Pages
 
-1. ارفع المشروع على GitHub.
-2. ادخل [vercel.com](https://vercel.com) ← **Add New** ← **Project**، واختار الريبو.
-3. Vercel هيعرف لوحده إنه مشروع Vite (Build Command: `npm run build`، Output: `dist`).
-4. قبل ما تدوس Deploy افتح **Environment Variables** وضيف:
-   - `VITE_SUPABASE_URL`
-   - `VITE_SUPABASE_ANON_KEY`
-5. دوس **Deploy**. هتاخد رابط زي `https://nawaqes.vercel.app`.
+الموقع مرفوع على: **https://dawoodalaa.github.io/nawaqes/**
 
-> لو غيرت المفاتيح بعد كده لازم تعمل **Redeploy**، لأن المفاتيح بتدخل في الكود وقت البناء.
-
-أو من التيرمنال:
+بيتنشر بنفس طريقة الكاشير: بيتبني على جهازك وملفات البناء بتترفع على فرع `gh-pages`.
 
 ```bash
-npx vercel
+npm run deploy
 ```
+
+- لازم يكون ملف `.env` فيه المفاتيح، لأنها بتدخل في الكود وقت البناء. السكريبت بيرفض يرفع لو مش موجودة.
+- بعد دقيقة أو اتنين التحديث بيوصل، واللي فاتح التطبيق هيظهرله شريط **"في تحديث جديد"** يدوس عليه.
+- أول مرة بس: من إعدادات الريبو على GitHub ← **Pages** ← Source: `gh-pages` و `/ (root)`.
 
 ---
 
 ## 4. التنزيل على الآيفون
 
-1. افتح رابط Vercel في **Safari** (لازم Safari، مش Chrome).
+1. افتح https://dawoodalaa.github.io/nawaqes/ في **Safari** (لازم Safari، مش Chrome).
 2. دوس زرار **المشاركة** (المربع اللي طالع منه سهم) تحت.
 3. انزل واختار **إضافة إلى الشاشة الرئيسية** (Add to Home Screen).
 4. الاسم هيبقى "النواقص"، دوس **إضافة**.

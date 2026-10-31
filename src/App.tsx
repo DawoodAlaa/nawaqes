@@ -6,6 +6,7 @@ import { ItemSheet } from './components/ItemSheet';
 import { StatCards } from './components/StatCards';
 import { SyncPill } from './components/SyncPill';
 import { Toast, type ToastData } from './components/Toast';
+import { UpdateBanner } from './components/UpdateBanner';
 import { useNow, useVisualViewportVars } from './lib/hooks';
 import { buildShareText, shareText } from './lib/share';
 import { deleteItem, saveItem, useStore } from './lib/store';
@@ -205,6 +206,8 @@ export default function App() {
       )}
 
       {toast && <Toast toast={toast} placement={sheet ? 'top' : 'bottom'} onDismiss={() => setToast(null)} />}
+
+      <UpdateBanner />
     </div>
   );
 }
